@@ -1,10 +1,19 @@
 <script>
-  let count = 0
-  const increment = () => {
-    count += 1
+  let count = 0;
+  let string = `You have clicked ${count} times.`;
+
+  function increment() {
+    count += 1;
   }
 </script>
 
+<style>
+  button {
+    padding: 15px 20px;
+  }
+</style>
+
 <button on:click={increment}>
-  count is {count}
+  Clicks {count}
 </button>
+<h3>{string}</h3>
