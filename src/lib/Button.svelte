@@ -3,6 +3,8 @@
   export let shadow = false;
   export let bgColor = 'inherit';
   export let textColor = 'inherit';
+
+  let isLeftHovered = false;
 </script>
 
 <!-- <button class={size === 'large' ? 'size-lg' : 'size-sm'}><slot>Click Me</slot></button> -->
@@ -15,8 +17,12 @@
   class:shadow
 >
   {#if $$slots.leftContent}
-    <div class="left-content">
-      <slot name="leftContent" />
+    <div
+      class="left-content"
+      on:mouseenter={() => (isLeftHovered = true)}
+      on:mouseleave={() => (isLeftHovered = false)}
+    >
+      <slot name="leftContent" {isLeftHovered} />
     </div>
   {/if}
   <slot>Click Me</slot>
