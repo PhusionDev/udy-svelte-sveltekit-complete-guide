@@ -12,6 +12,7 @@
   shadow
   bgColor="red"
   textColor="blue"
+  disabled
 >
   <div style:width="20px" slot="leftContent" let:isLeftHovered>
     {#if isLeftHovered}
