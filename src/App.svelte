@@ -7,5 +7,5 @@
 
 </style>
 
-<Button size="large" shadow>Button Text</Button>
+<Button size="large" shadow bgColor="red" textColor="blue">Button Text</Button>
 <!-- <Button /> -->
