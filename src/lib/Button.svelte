@@ -9,6 +9,7 @@
 
 <!-- <button class={size === 'large' ? 'size-lg' : 'size-sm'}><slot>Click Me</slot></button> -->
 <button
+  on:click
   style:--buttonBgColor={bgColor}
   style:--buttonTextColor={textColor}
   class:size-lg={size === 'large'}
